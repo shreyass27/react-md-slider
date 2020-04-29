@@ -1,0 +1,11 @@
+.container {
+    display: block;
+}
+
+.selectedArea {
+    background-color: #ff4784 !important;
+}
+
+.container .slider::-webkit-slider-thumb {
+    background: #96CBFE !important;
+}
