@@ -42,9 +42,14 @@ const Slider = function ({
   ].join(' ');
 
   return <div className={classes.root}>
-    {label && <label className={classes.label} htmlFor={id}>{label}</label>}
+    {/* Label displayed if 'label' is passed. */}
+    {label && <label className={`${styles.label} ${classes.label}`} htmlFor={id}>{label}</label>}
+
     <div className={containerClasses}>
-      {highlighted && <div className={styles.selectedArea} style={{ width: getHighLightWidth() }}></div>}
+
+      {/* Section to highlight select range */}
+      {highlighted && <div className={`${styles.selectedArea} ${classes.selectedArea}`} style={{ width: getHighLightWidth() }}></div>}
+
       <input type="range"
         disabled={disabled}
         onChange={e => onChange(+e.target.value)}
@@ -52,9 +57,10 @@ const Slider = function ({
         min={min}
         max={max}
         step={step}
-        className={styles.slider}
+        className={`${styles.slider} ${classes.slider}`}
         tabIndex={tabIndex}
         id={id} />
+
     </div>
   </div>;
 }
@@ -62,21 +68,92 @@ const Slider = function ({
 export default Slider;
 
 Slider.propTypes = {
+  /**
+    * The function that will be executed when the slider value is changed.
+    * Returns current integer value. 
+    */
   onChange: PropTypes.func.isRequired,
+
+  /**
+    * Integer value to display current position or state of slider.
+    */
   value: PropTypes.number.isRequired,
+
+  /**
+    * Min range value of slider.
+    */
   min: PropTypes.number.isRequired,
+
+  /**
+    * Max range value of slider.
+    */
   max: PropTypes.number.isRequired,
+
+  /**
+    * Size of each step value of slider.
+    */
   step: PropTypes.number,
+
+  /**
+    * To disable slider actions.
+    * Passing "true" will disable the slider.
+    */
   disabled: PropTypes.bool,
+
+  /**
+    * Passing "true" will highlight selected range.
+    */
   highlighted: PropTypes.bool,
+
+  /**
+    * ID passed to slider.
+    */
   id: PropTypes.string,
+
+  /**
+    * Accent options provided by slider. Default set to 'indigo'.
+    * Only one od 'red' | 'green' | 'amber' values can be passed
+    */
   accent: PropTypes.oneOf(['red', 'green', 'amber']),
+
+  /**
+    * Label to be displayed above slider.
+    */
   label: PropTypes.string,
+
+  /**
+   * A Jss Object used to override or extend the styles applied.
+   */
   classes: PropTypes.shape({
+    /**
+     * Style applied to the root.
+     */
     root: PropTypes.string,
+
+    /**
+     * Style applied to the slider container.
+     */
     container: PropTypes.string,
-    label: PropTypes.string
+
+    /**
+     * Style applied to the slider label.
+     */
+    label: PropTypes.string,
+
+    /**
+     * Style applied to the highlighted/selected range of slider.
+     */
+    selectedArea: PropTypes.string,
+
+    /**
+      * Style applied to the main slider.
+      */
+    slider: PropTypes.string
   }),
+
+  /**
+    * Tab Index applied to slider.
+    */
   tabIndex: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
