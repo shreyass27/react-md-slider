@@ -7,9 +7,10 @@
 
 .label {
   color: #000;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 16px;
+  font-family: inherit;
   letter-spacing: 0.02em;
   padding-bottom: 8px;
 }

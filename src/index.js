@@ -106,13 +106,13 @@ Slider.propTypes = {
   highlighted: PropTypes.bool,
 
   /**
-    * ID passed to slider.
+    * ID applied to slider.
     */
   id: PropTypes.string,
 
   /**
     * Accent options provided by slider. Default set to 'indigo'.
-    * Only one od 'red' | 'green' | 'amber' values can be passed
+    * Only one of 'red' | 'green' | 'amber' values can be passed
     */
   accent: PropTypes.oneOf(['red', 'green', 'amber']),
 

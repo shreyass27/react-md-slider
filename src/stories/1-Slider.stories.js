@@ -12,13 +12,23 @@ export default {
     info: { inline: true },
   }
 };
-const stylesObject = { width: '320px', margin: '8px 40px' };
+
+export const Installation = () => <div>
+  Installation
+</div>
+
+Installation.story = {
+  parameters: {
+    info: { inline: false },
+  }
+};
+
 
 export const Default = () => {
   const [value, setValue] = useState(10);
 
   return (
-    <div style={stylesObject}>
+    <div className={styles.sliderBlock}>
       <Slider
         onChange={setValue}
         value={value}
@@ -35,7 +45,7 @@ export const WithHighlight = () => {
   const [value, setValue] = useState(10);
 
   return (
-    <div style={stylesObject}>
+    <div className={styles.sliderBlock}>
       <Slider
         onChange={setValue}
         value={value}
@@ -65,7 +75,7 @@ export const AccentOptions = () => {
 
   return <div>
     {accentOptions.map(color =>
-      <div style={stylesObject}>
+      <div className={styles.sliderBlock}>
         <Slider
           onChange={onSetValue(color)}
           value={value[color]}
@@ -84,7 +94,7 @@ export const Disabled = () => {
   const [value, setValue] = useState(50);
 
   return (
-    <div style={stylesObject}>
+    <div className={styles.sliderBlock}>
       <Slider
         onChange={setValue}
         value={value}
@@ -103,7 +113,7 @@ export const CustomStyled = () => {
   const [value, setValue] = useState(50);
 
   return (
-    <div style={stylesObject}>
+    <div className={styles.sliderBlock}>
       <Slider
         onChange={setValue}
         value={value}
@@ -124,7 +134,7 @@ export const Labeled = () => {
   const [value, setValue] = useState(50);
 
   return (
-    <div style={stylesObject}>
+    <div className={styles.sliderBlock}>
       <Slider
         onChange={setValue}
         value={value}
@@ -132,7 +142,7 @@ export const Labeled = () => {
         min={10}
         step={10}
         highlighted
-        label="Label"
+        label="React Slider"
       />
     </div>);
 };

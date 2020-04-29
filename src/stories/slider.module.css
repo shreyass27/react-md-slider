@@ -1,3 +1,8 @@
+.sliderBlock {
+    width: 320px;
+    margin: 8px 40px;
+}
+
 .container {
     display: block;
 }
