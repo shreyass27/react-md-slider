@@ -1,25 +1,17 @@
-# react-md-slider
-
-> React draggable slider
-
-[![NPM](https://img.shields.io/npm/v/react-md-slider.svg)](https://www.npmjs.com/package/react-md-slider) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-```bash
-npm install --save react-md-slider
-```
-
-## Usage
-
-```jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Slider from 'react-md-slider';
 import 'react-md-slider/dist/index.css';
 
 function App() {
   const [value, setValue] = useState(10);
+  const [max, setMax] = useState(100);
+
+  useEffect(() => {
+    setTimeout(function () {
+      setMax(200)
+    }, 5000)
+  }, [setValue, setMax])
 
   return (
     <div className="App">
@@ -31,10 +23,11 @@ function App() {
         <Slider
           onChange={setValue}
           value={value}
-          max={200}
+          max={max}
           min={10}
           step={10}
           label="Number slider"
+          accent="green"
           highlighted
         />
       </div>
@@ -43,9 +36,3 @@ function App() {
 }
 
 export default App;
-
-```
-
-## License
-
-MIT © [shreyass2709](https://github.com/shreyass27)
