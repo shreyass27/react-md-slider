@@ -12,10 +12,12 @@ Installs all the NPM dependencies of project.
 
 ### `yarn start`
 
-Runs the react-md-slider in the development mode and makes it usable in example app.
+Runs the react-md-slider library in development mode and makes it usable in example app.
 
 
 Open a new terminal and navigate to `./example` folder.
+
+### `cd example`
 
 In the example app project directory run:
 
