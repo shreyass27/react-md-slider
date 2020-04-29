@@ -13,23 +13,6 @@ export default {
   }
 };
 
-export const Default = () => {
-  const [value, setValue] = useState(10);
-
-  return (
-    <div className={styles.sliderBlock}>
-      <Slider
-        onChange={setValue}
-        value={value}
-        max={200}
-        min={10}
-        step={10}
-      />
-    </div >
-  );
-};
-
-
 export const Installation = () => <div className={styles.docContainer}>
   <h1>react-md-slider</h1>
   <h2>A simple and reusable React draggable slider component.</h2>
@@ -54,6 +37,24 @@ Installation.story = {
     info: { inline: false },
   }
 };
+
+
+export const Default = () => {
+  const [value, setValue] = useState(10);
+
+  return (
+    <div className={styles.sliderBlock}>
+      <Slider
+        onChange={setValue}
+        value={value}
+        max={200}
+        min={10}
+        step={10}
+      />
+    </div >
+  );
+};
+
 
 export const WithHighlight = () => {
   const [value, setValue] = useState(10);
