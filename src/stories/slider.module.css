@@ -1,6 +1,7 @@
 .sliderBlock {
     width: 320px;
     margin: 8px 40px;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
 }
 
 .container {
@@ -13,4 +14,9 @@
 
 .container .slider::-webkit-slider-thumb {
     background: #96CBFE !important;
+}
+
+.docContainer {
+    padding: 20px 40px 40px;
+    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
 }

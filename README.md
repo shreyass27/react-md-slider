@@ -1,13 +1,22 @@
 # react-md-slider
 
-> React draggable slider
+A simple and reusable React draggable slider component. ([Demo](https://react-md-slider-ss.netlify.app/))
 
 [![NPM](https://img.shields.io/npm/v/react-md-slider.svg)](https://www.npmjs.com/package/react-md-slider) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Install
 
-```bash
+## Installation
+
+The package can be installed via [npm](https://github.com/npm/cli):
+
+```
 npm install --save react-md-slider
+```
+
+Or via [yarn](https://github.com/yarnpkg/yarn):
+
+```
+yarn add react-md-slider
 ```
 
 ## Usage
@@ -34,7 +43,7 @@ function App() {
           max={200}
           min={10}
           step={10}
-          label="Number slider"
+          label="Number slider"¸
           highlighted
         />
       </div>
@@ -45,7 +54,10 @@ function App() {
 export default App;
 
 ```
+### API Documentation
+
+For component props, methods, and living examples, please see the [Demo](https://react-md-slider-ss.netlify.app/):
 
 ## License
 
-MIT © [shreyass2709](https://github.com/shreyass27)
+MIT © [shreyass27](https://github.com/shreyass27)

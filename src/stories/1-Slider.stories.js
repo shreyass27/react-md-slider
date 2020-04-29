@@ -13,8 +13,23 @@ export default {
   }
 };
 
-export const Installation = () => <div>
-  Installation
+export const Installation = () => <div className={styles.docContainer}>
+  <h1>react-md-slider</h1>
+  <h2>A simple and reusable React draggable slider component.</h2>
+  <h2>Installation</h2>
+  <h3>Using NPM</h3>
+  <h4>
+    <code>
+      npm install --save react-md-slider
+  </code>
+  </h4>
+  <p>Or</p>
+  <h3>Using Yarn</h3>
+  <h4>
+    <code>
+      yarn add react-md-slider
+  </code>
+  </h4>
 </div>
 
 Installation.story = {
