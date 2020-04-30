@@ -40,7 +40,7 @@ Installation.story = {
 
 
 export const Default = () => {
-  const [value, setValue] = useState(10);
+  const [value, setValue] = useState(100);
 
   return (
     <div className={styles.sliderBlock}>
@@ -57,7 +57,7 @@ export const Default = () => {
 
 
 export const WithHighlight = () => {
-  const [value, setValue] = useState(10);
+  const [value, setValue] = useState(90);
 
   return (
     <div className={styles.sliderBlock}>
